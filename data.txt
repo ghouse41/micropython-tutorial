@@ -1,0 +1,16 @@
+Entering REPL. Use Control-X to exit.
+>
+MicroPython v1.11-8-g48dcbbe60 on 2019-05-29; ESP module with ESP8266
+Type "help()" for more information.
+>>> 
+>>> import network
+>>> sta_if = network.WLAN(network.STA_IF)
+>>> sta_if.connect('Honor 9N_B85F','abdul004')
+>>> sta_if.status()
+5
+>>> sta_if.isconnected()
+True
+>>> import urequests
+>>> r = urequests.post('https://maker.ifttt.com/trigger/button_pressed/with/key/dXCHtICZKvcobBjjDwwvdP',json={'value1': 'micropython1'})
+>>> r.status_code
+200
